@@ -1,0 +1,195 @@
+.staynest-admin-dashboard {
+  padding-bottom: var(--space-3xl);
+}
+
+.admin-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.admin-pill-tag {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: 4px;
+}
+
+.admin-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.admin-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Admin stats cards */
+.admin-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.stat-icon-wrapper.gross-vol {
+  background-color: #ECFDF5;
+  color: #059669;
+}
+
+.stat-icon-wrapper.users {
+  background-color: #EFF6FF;
+  color: #2563EB;
+}
+
+.stat-icon-wrapper.properties {
+  background-color: #F3E8FF;
+  color: #9333EA;
+}
+
+.stat-icon-wrapper.bookings {
+  background-color: #FEF3C7;
+  color: #D97706;
+}
+
+/* Tabs */
+.admin-tabs-bar {
+  display: flex;
+  gap: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-lg);
+}
+
+.admin-tab-btn {
+  padding: 10px 18px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.admin-tab-btn:hover {
+  color: var(--color-text);
+}
+
+.admin-tab-btn.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+/* Table Card */
+.admin-table-card {
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border);
+}
+
+.table-header-desc {
+  margin-bottom: var(--space-md);
+}
+
+.table-header-desc h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.table-header-desc p {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.table-responsive-wrapper {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--font-size-sm);
+}
+
+.admin-table th {
+  background-color: var(--color-surface-hover);
+  padding: 12px 14px;
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.admin-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--color-border-light);
+  color: var(--color-text);
+  vertical-align: middle;
+}
+
+.prop-name-text {
+  font-weight: 600;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.user-name-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-weight: 600;
+}
+
+.user-thumb {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-thumb.placeholder {
+  background-color: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.email-cell {
+  color: var(--color-text-secondary);
+  font-family: monospace;
+  font-size: var(--font-size-xs);
+}
+
+.text-mono {
+  font-family: monospace;
+  font-size: 0.75rem;
+}
+
+@media (max-width: 1024px) {
+  .admin-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

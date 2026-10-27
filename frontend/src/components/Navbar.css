@@ -1,0 +1,289 @@
+.staynest-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Brand Logo */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.brand-logo-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(15, 118, 110, 0.25);
+}
+
+.brand-logo-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.brand-name-accent {
+  color: var(--color-primary);
+}
+
+/* Center Navigation */
+.navbar-center-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  background-color: var(--color-border-light);
+  padding: 4px;
+  border-radius: var(--radius-full);
+}
+
+.navbar-center-nav .nav-link {
+  padding: 0.5rem 1.1rem;
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-fast);
+}
+
+.navbar-center-nav .nav-link:hover {
+  color: var(--color-text);
+}
+
+.navbar-center-nav .nav-link.active {
+  background-color: var(--color-surface);
+  color: var(--color-primary);
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Right Section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  position: relative;
+}
+
+/* Demo Role Switcher Badge */
+.role-demo-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary-bg);
+  border: 1px solid rgba(20, 184, 166, 0.3);
+  font-size: var(--font-size-xs);
+  color: var(--color-primary-dark);
+  cursor: pointer;
+  user-select: none;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.role-demo-badge:hover {
+  background-color: #CCFBF1;
+  border-color: var(--color-primary);
+}
+
+.demo-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.role-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 260px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  padding: var(--space-xs);
+  z-index: 1010;
+}
+
+.role-dropdown-header {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  padding: 0.5rem 0.75rem 0.25rem;
+  letter-spacing: 0.05em;
+}
+
+.role-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius-sm);
+  text-align: left;
+  transition: background-color var(--transition-fast);
+}
+
+.role-item:hover {
+  background-color: var(--color-border-light);
+}
+
+.role-item.selected {
+  background-color: var(--color-primary-bg);
+}
+
+.role-item-icon {
+  font-size: 1.25rem;
+}
+
+.role-item-title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.role-item-sub {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+/* User Menu Trigger */
+.user-menu-trigger {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 4px 6px 4px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface);
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.user-menu-trigger:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-text-secondary);
+}
+
+.menu-hamburger-icon {
+  color: var(--color-text-secondary);
+}
+
+.user-avatar-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-avatar-placeholder {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+}
+
+/* User Dropdown */
+.user-dropdown-card {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 240px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xl);
+  padding: var(--space-sm) 0;
+  z-index: 1010;
+}
+
+.dropdown-user-info {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-user-name {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.dropdown-user-email {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  word-break: break-all;
+}
+
+.dropdown-divider {
+  height: 1px;
+  background-color: var(--color-border-light);
+  margin: 0.35rem 0;
+}
+
+.dropdown-link {
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 1rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  transition: background-color var(--transition-fast);
+  text-decoration: none;
+  width: 100%;
+}
+
+.dropdown-link:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.dropdown-link.logout-btn {
+  color: var(--color-error);
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 840px) {
+  .navbar-center-nav {
+    display: none;
+  }
+}

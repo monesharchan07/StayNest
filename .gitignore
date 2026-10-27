@@ -1,0 +1,70 @@
+# ==============================================================================
+# StayNest Root Git Ignore
+# ==============================================================================
+
+# Environment files - NEVER commit sensitive credentials, keys, or passwords
+.env
+.env.*
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+!.env.example
+
+# Dependency directories
+node_modules/
+*/node_modules/
+vendor/
+*/vendor/
+
+# Production and build outputs
+dist/
+*/dist/
+dist-ssr/
+*/dist-ssr/
+build/
+*/build/
+*.local
+
+# Logs and runtime traces
+logs/
+*/logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# XAMPP / Backend runtime uploads (preserve .gitkeep)
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Operating system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+[Dd]esktop.ini
+
+# IDE and Editor directories
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swo
+*.swp
+.cursor/
+
+# Temporary and scratch files
+tmp/
+temp/
+scratch/
+*.tmp
+*.bak

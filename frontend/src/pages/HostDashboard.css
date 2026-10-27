@@ -1,0 +1,213 @@
+.staynest-host-dashboard {
+  padding-bottom: var(--space-3xl);
+}
+
+.host-dash-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--space-2xl);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.host-badge-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: 4px;
+}
+
+.host-dash-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+/* Stats Grid */
+.host-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+  margin-bottom: var(--space-2xl);
+}
+
+.stat-card {
+  padding: var(--space-lg);
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.stat-icon-wrapper {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.stat-icon-wrapper.revenue {
+  background-color: #ECFDF5;
+  color: #059669;
+}
+
+.stat-icon-wrapper.listings {
+  background-color: #EFF6FF;
+  color: #2563EB;
+}
+
+.stat-icon-wrapper.bookings {
+  background-color: #FEF3C7;
+  color: #D97706;
+}
+
+.stat-icon-wrapper.rating {
+  background-color: #FDF2F8;
+  color: #DB2777;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-label {
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.stat-value {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+  line-height: 1.2;
+}
+
+.stat-sub {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+  margin-top: 4px;
+}
+
+/* Tabs */
+.host-tabs-bar {
+  display: flex;
+  gap: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--space-lg);
+}
+
+.host-tab-btn {
+  padding: 10px 18px;
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.host-tab-btn:hover {
+  color: var(--color-text);
+}
+
+.host-tab-btn.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+/* Tables */
+.host-properties-table-card {
+  overflow-x: auto;
+}
+
+.host-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--font-size-sm);
+}
+
+.host-table th {
+  background-color: var(--color-surface-hover);
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.host-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-border-light);
+  color: var(--color-text);
+}
+
+.prop-name-cell {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.prop-thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+}
+
+.prop-title-text {
+  font-weight: 600;
+  max-width: 220px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.prop-rating-sub {
+  font-size: var(--font-size-xs);
+  color: var(--color-accent-warm);
+}
+
+.empty-host-box {
+  padding: var(--space-3xl);
+  text-align: center;
+  max-width: 460px;
+  margin: var(--space-2xl) auto;
+}
+
+.empty-host-box h3 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.empty-host-box p {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--space-lg);
+}
+
+@media (max-width: 1024px) {
+  .host-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .host-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}

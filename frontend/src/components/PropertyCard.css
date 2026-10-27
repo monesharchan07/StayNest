@@ -1,0 +1,154 @@
+.staynest-property-card {
+  position: relative;
+  transition: transform var(--transition-base);
+}
+
+.staynest-property-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-link-wrapper {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-media-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 0.85;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--color-border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.staynest-property-card:hover .card-image {
+  transform: scale(1.05);
+}
+
+.card-type-tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(4px);
+  color: var(--color-primary-dark);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  transition: transform var(--transition-fast);
+}
+
+.card-wishlist-btn:hover {
+  transform: scale(1.15);
+}
+
+.card-wishlist-btn svg {
+  width: 22px;
+  height: 22px;
+}
+
+.card-info {
+  padding: var(--space-md) 2px 0;
+}
+
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+.card-location {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-rating {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: var(--font-size-sm);
+}
+
+.card-star {
+  color: var(--color-accent-warm);
+}
+
+.card-rating-num {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.card-reviews {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+.card-title {
+  font-size: var(--font-size-sm);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-specs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--font-size-xs);
+  color: var(--color-text-light);
+  margin-bottom: 8px;
+}
+
+.spec-dot {
+  font-size: 8px;
+}
+
+.card-footer-price {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.price-amount {
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+.price-period {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}

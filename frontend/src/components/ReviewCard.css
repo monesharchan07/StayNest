@@ -1,0 +1,58 @@
+.staynest-review-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border-light);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.review-user-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.reviewer-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviewer-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewer-name {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.review-date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+}
+
+.review-rating-stars {
+  display: flex;
+  gap: 2px;
+  font-size: var(--font-size-sm);
+}
+
+.review-rating-stars .star.filled {
+  color: var(--color-accent-warm);
+}
+
+.review-rating-stars .star.empty {
+  color: var(--color-border);
+}
+
+.review-comment-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text);
+  line-height: 1.6;
+}

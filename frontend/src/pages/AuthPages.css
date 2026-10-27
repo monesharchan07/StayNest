@@ -1,0 +1,186 @@
+.staynest-auth-page {
+  padding-top: calc(var(--navbar-height) + 40px);
+  padding-bottom: var(--space-3xl);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+
+.auth-card {
+  max-width: 480px;
+  width: 100%;
+  padding: var(--space-2xl);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-xl);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.auth-logo-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+}
+
+.auth-logo-badge svg {
+  width: 26px;
+  height: 26px;
+}
+
+.auth-title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-xs);
+}
+
+.auth-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.auth-error-banner {
+  background-color: var(--color-error-bg);
+  border-left: 3px solid var(--color-error);
+  color: var(--color-error);
+  font-size: var(--font-size-xs);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.auth-form {
+  margin-bottom: var(--space-xl);
+}
+
+/* Role Radio Selector */
+.role-selector-radios {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-sm);
+}
+
+.role-radio-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.role-radio-card input {
+  position: absolute;
+  opacity: 0;
+}
+
+.role-radio-card.active {
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-bg);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.role-radio-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.role-radio-icon {
+  font-size: 1.5rem;
+}
+
+.role-radio-title {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.role-radio-desc {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+}
+
+/* Demo Fast Login Pills */
+.demo-accounts-box {
+  background-color: var(--color-surface-hover);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.demo-box-title {
+  font-size: var(--font-size-xs);
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 2px;
+}
+
+.demo-box-sub {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.demo-buttons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.demo-pill-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.demo-pill-btn:hover {
+  background-color: var(--color-primary-bg);
+  border-color: var(--color-primary-light);
+}
+
+.demo-email {
+  color: var(--color-text-secondary);
+  font-family: monospace;
+  font-size: 0.75rem;
+}
+
+.auth-footer-prompt {
+  text-align: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.auth-link {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
